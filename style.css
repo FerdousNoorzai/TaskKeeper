@@ -19,13 +19,13 @@
 
 
   body {
-      min-width: 98vw;
-      min-height: 100vh;
       background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  }
-
-  .container {
-      min-width: 90vw;
+      min-height: 100vh;
+    }
+    
+    .container {
+        min-width: 90vw;
+        height: inherit;
       margin: 5% 10%;
       display: flex;
       flex-direction: column;
@@ -86,11 +86,9 @@
     flex: 1 1 0%;
     max-width: 800px;
     width: 98vw;
-    /* margin: 0 auto; */
-
   }
   .task-list{
-    padding:1rem 0;
+    padding:0.5rem 0;
   }
 
   #tasks .task {
@@ -152,12 +150,49 @@
 }
 
 footer{
+    position: relative;
     display: flex;
     justify-content: center;
 }
 footer> div{
-    position: relative;
+    position: absolute;
     bottom: 0;
     margin-bottom: 10px;
-    margin-top: 13%;
+}
+
+.spacer{
+    margin-top: 22%;
+}
+
+@media only screen 
+  and (min-device-width: 250px) 
+  and (max-device-width: 920px) 
+ { 
+    .task-list{
+        padding: 0.2rem 0;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    
+    h2, #new-task-submit{
+        font-size: 1.1rem;
+    }
+    #tasks .task {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 80%;
+    }
+    .task .content .text{
+        font-size: 1rem;
+    }
+    footer> div{
+        position: absolute;
+        bottom: 0;
+        margin-top:5%;
+    }
+    .spacer{
+        margin-top: 60vh;
+    }
 }

@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
 
 		const task = input.value;
 		if(task =='') { alert("Please enter a task into the tax box"); return;}
+
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
 
@@ -64,5 +65,8 @@ window.addEventListener('load', () => {
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
 		});
+
+		const footer = document.querySelector('footer');
+		if(list_el.childElementCount > 2) { console.log(list_el.childElementCount); footer.classList.remove('spacer'); }
 	});
 });
